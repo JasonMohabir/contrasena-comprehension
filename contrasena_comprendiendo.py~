@@ -1,0 +1,21 @@
+# Write a function that uses list comprehension to return
+# whether a password meets a minimum threshold:
+# it contains a mixture of upper- and lowercase letters, and at least one number.
+
+def passwordCheckerLite(password):
+    uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    lowercase = "abcdefghijklmnopqrstuvwxyz"
+    numbers = "1234567890"
+    stuff = [1 if x in uppercase else
+             2 if x in lowercase else
+             3 if x in numbers else
+             0 for x in password]
+    if (1 in stuff and
+        2 in stuff and
+        3 in stuff):
+        return True
+    else:
+        return False
+
+print passwordCheckerLite("sure")
+
