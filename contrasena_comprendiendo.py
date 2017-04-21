@@ -14,8 +14,6 @@ def passwordCheckerLite(password):
     else:
         return False
 
-print passwordCheckerLite("Sur0")
-
 def passwordStrenght(password):
     strength = 0
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -37,6 +35,5 @@ def passwordStrenght(password):
         strength += 2
     if (len(stuff) >= 10):
         strength += 2
-    print str(strength)
+    return str(strength)
 
-print passwordStrenght("socialistbrownman")
